@@ -15,7 +15,7 @@
         
        
         <div class="text-center my-3">
-            <input type="submit" class="btn btn-primary" value="Modifica">
+            <input type="submit" class="btn btn-primary" value="Crea">
         </div>
         
     
