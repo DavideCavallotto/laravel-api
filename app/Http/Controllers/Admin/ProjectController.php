@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Technology;
 use App\Models\Type;
+use Illuminate\Support\Str;
 
 class ProjectController extends Controller
 {
@@ -44,6 +45,7 @@ class ProjectController extends Controller
         ]);   
                         
         $data = $request->all();
+        $data['slug'] = Str::slug($data['title'], '-');
 
         $new_project = Project::create($data);
 
@@ -90,6 +92,7 @@ class ProjectController extends Controller
             
 
         $data = $request->all();
+        $data['slug'] = Str::slug($data['title'], '-');
 
         $project->update($data);
 

@@ -14,6 +14,7 @@
         <h1>{{$project->title}}</h1>
         <p>{{$project->description}}</p>
         <p>{{ optional($project->type)->name}}</p>
+        <p>{{$project->slug}}</p>
 
     </section>
     <div class="text-center mb-2">

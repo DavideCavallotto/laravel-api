@@ -8,6 +8,8 @@ use App\Models\Technology;
 use App\Models\Type;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
+
 
 class ProjectSeeder extends Seeder
 {
@@ -50,6 +52,7 @@ class ProjectSeeder extends Seeder
             $new_project = new Project();
 
             $new_project->title = $project['title'];
+            $new_project->slug = Str::slug($new_project->title,'-');
             $new_project->description = $project['description'];
             $new_project->image = $project['image'];
             $new_project->type_id = $ids->random();
